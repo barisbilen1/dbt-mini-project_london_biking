@@ -14,6 +14,9 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              field: customer_id
+              to: ref('stg_customers')
       - name: status
         tests:
           - accepted_values:
@@ -23,3 +26,4 @@ models:
                 - returned
                 - return_pending
                 - placed
+        
