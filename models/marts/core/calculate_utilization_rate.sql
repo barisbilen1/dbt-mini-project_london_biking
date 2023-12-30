@@ -17,11 +17,11 @@ with
     bike_usage_rates as (
 
         select
-            bike_id,
             rental_date,
-            ride_duration_daily_sum / 1440 as daily_utilization_rate
+            avg(ride_duration_daily_sum / 1440) as daily_utilization_rate --> /1440 to get the % usage in 24 hours
         from bike_usage
-        order by daily_utilization_rate desc
+        group by rental_date
+        order by rental_date desc
 
     )
 
