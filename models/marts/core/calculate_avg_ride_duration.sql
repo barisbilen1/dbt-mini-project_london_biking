@@ -1,4 +1,4 @@
-with table1 as (
+with cycle_hires as (
 
 SELECT
   *
@@ -6,4 +6,4 @@ FROM
   {{ ref('stg_cycle_hires')}}
 )
 
-select * from table1
+select * from cycle_hires
