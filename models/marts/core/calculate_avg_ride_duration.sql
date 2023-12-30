@@ -1,14 +1,14 @@
 with
-    cycle_hires as (
+    ride_duration as (
 
         select
-            start_station_name,
-            end_station_name,
-            avg(duration) as average_ride_duration
+            start_station,
+            end_station,
+            avg(ride_duration) as average_ride_duration
         from {{ ref("stg_cycle_hires") }}
-        group by start_station_name, end_station_name
+        group by start_station, end_station
         order by count(*) desc, average_ride_duration desc
 
     )
 
-select * from cycle_hires
+select * from ride_duration
