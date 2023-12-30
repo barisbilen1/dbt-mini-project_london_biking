@@ -9,7 +9,7 @@ with
             sum(ride_duration) / 60 as ride_duration_daily_sum,  -- convert seconds to minutes
             rental_date
         from {{ ref("stg_cycle_hires") }}
-        where ride_duration < 21600 --> exclude the rentals with duration over 6 hours, possibly indicating a data error
+        where ride_duration < 864000 --> exclude the rentals with duration over 10 days, possibly indicating a long term lease or data error
         group by rental_date, bike_id
 
     ),
