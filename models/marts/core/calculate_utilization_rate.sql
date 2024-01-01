@@ -1,6 +1,4 @@
--- 1-her bike in gunluk surus suresini bul.
--- 2-bir gunun yuzde kacinda kullaniliyormus onu bul.
--- 3- sort et, ya da overal bike uti. rate i hesapla.
+
 with
     bike_usage as (
 
