@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: stg_cycle_hires
+  - name: calculate_avg_ride_duration

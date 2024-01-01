@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: london_biking
+    database: bigquery-dbt-project-baris
+    schema: london_biking
+    tables:
+      - name: cycle_hires_raw
